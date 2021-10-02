@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS Supply_Chain;
+
+CREATE DATABASE Supply_Chain;
