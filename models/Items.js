@@ -1,6 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
 // const bcrypt = require('bcrypt');
-const Consumer = require('./Consumer');
 const sequelize = require('../config/connection');
 
 class Items extends Model {
@@ -37,7 +36,7 @@ Items.init(
         consumer_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'Consumer',
+                model: 'consumer',
                 key: 'id',
             },
         },

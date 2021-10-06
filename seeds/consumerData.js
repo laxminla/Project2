@@ -24,6 +24,6 @@ const consumerdata = [
     },
 ];
 
-const seedConsumer = () => Consumer.create(consumerdata);
+const seedConsumers = () => Consumer.bulkCreate(consumerdata);
 
-module.exports = seedConsumer;
+module.exports = seedConsumers;

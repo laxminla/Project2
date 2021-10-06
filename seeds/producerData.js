@@ -1,6 +1,6 @@
 const { Producer } = require('../models');
 
-const producerData = [
+const producerdata = [
   {
     producer_name: 'Cow Farm',
     producer_goods: 'milk',
@@ -34,6 +34,6 @@ const producerData = [
   },
 ];
 
-const seedProducer = () => Producer.bulkCreate(producerData);
+const seedProducers = () => Producer.bulkCreate(producerdata);
 
-module.exports = seedProducer;
+module.exports = seedProducers;
