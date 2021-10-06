@@ -1,11 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 
-class Consumer extends Model {
+class ProducerItems extends Model {
 
 }
-
-Consumer.init(
+ProducerItems.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -14,14 +13,20 @@ Consumer.init(
             autoIncrement: true,
         },
 
-        consumer_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
+        items_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'Items',
+                key: 'id',
+              },
         },
 
-        consumer_goods: {
-            type: DataTypes.STRING,
-            allowNull: false,
+        producer_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'Producer',
+                key: 'id',
+              },
         },
 
         // consumer_balance: {
@@ -40,11 +45,11 @@ Consumer.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'consumer',
+        modelName: 'producer_items',
     }
 );
 
 
 
 
-module.exports = Consumer;
+module.exports = ProducerItems;
