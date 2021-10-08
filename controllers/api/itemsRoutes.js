@@ -34,9 +34,7 @@ router.get('/', async (req, res) => {
 
   // create a new items
   router.post('/', (req, res) => {
-    Items.create({
-      items_name: req.body.items_name
-    })
+    Items.create(req.body)
       .then(dbItemsData => res.json(dbItemsData))
       .catch(err => {
         console.log(err);
