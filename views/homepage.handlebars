@@ -1,3 +1,22 @@
+<ul>
+    {{#each producers as |producer|}}
+    <li>{{producer.producer_name}}</li>
+    {{/each}}
+</ul>
+
 {{#each producers as |producer|}}
-{{> producer-details}}
+{{> producer}}
 {{/each}}
+
+
+<ul>
+    {{#each consumers as |consumer|}}
+    <li>{{consumer.consumer_name}}</li>
+    {{/each}}
+</ul>
+
+<ul>
+    {{#each items as |item|}}
+    <li>{{item.item_name}}</li>
+    {{/each}}
+</ul>

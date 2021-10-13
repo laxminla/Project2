@@ -24,14 +24,6 @@ Consumer.init(
             allowNull: false,
         },
 
-        // consumer_balance: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false,
-        //     defauleValue: 10,
-        //     validate: {
-        //         isNumeric: true,
-        //     },
-        // },
 
     },
 

@@ -12,7 +12,6 @@ const sequelize = require('./config/connection');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Sets up session and connect to our Sequelize db
 const sess = {
   secret: 'Super secret secret',
   // Express session will use cookies by default, but we can specify options for those cookies by adding a cookies property to our session options.
