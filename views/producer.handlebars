@@ -1,0 +1,14 @@
+<section class="container">
+  <h3 class="producer-name">{{producer.producer_name}}</h3>
+  <h4>producer_goods</h4>
+
+   {{#if loggedIn}}
+  <section class="flex-row justify-center">
+    {{#each producer_goods.items as |items|}}
+    {{> items-details}}
+    {{/each}}
+  </section>
+</section>
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}
