@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Consumer, Producer, Items } = require('../../models');
+const { Consumer, Producer, Items, User } = require('../../models');
 
 
 // Get all items

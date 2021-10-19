@@ -1,8 +1,10 @@
 const sequelize = require('../config/connection');
+const { Consumer, Producer, Items, User } = require('../models');
+
 const seedConsumer = require('./consumerData');
 const seedProducer = require('./producerData');
-const seedItems = require('./ItemsData');
-const seedProducerItems = require('./ProducerItems');
+const seedItems = require('./itemsData');
+const seedUser = require('./userData');
 
 const seedAll = async () => {
     await sequelize.sync({ force: true });
@@ -13,7 +15,7 @@ const seedAll = async () => {
 
     await seedItems();
 
-    await seedProducerItems();
+    await seedUser();
 
     process.exit(0);
 };

@@ -2,10 +2,10 @@
   <h3 class="consumer-name">{{consumer.consumer_name}}</h3>
   <h4>consumer_goods</h4>
 
-   {{#if loggedIn}}
+  {{#if loggedIn}}
   <section class="flex-row justify-center">
-    {{#each consumer.items as |items|}}
-    {{> items-details}}
+    {{#each consumer.consumers as |consumer|}}
+    {{> consumers-details}}
     {{/each}}
   </section>
 </section>

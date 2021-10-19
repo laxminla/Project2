@@ -1,6 +1,6 @@
 const { Consumer } = require('../models');
 
-const consumerdata = [
+const consumerData = [
     {
         consumer_name: 'Safeway',
         consumer_goods: 'food',
@@ -24,6 +24,6 @@ const consumerdata = [
     },
 ];
 
-const seedConsumer = () => Consumer.create(consumerdata);
+const seedConsumer = () => Consumer.bulkCreate(consumerData);
 
 module.exports = seedConsumer;

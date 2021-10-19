@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>You can create Producer, Consumer, and Items here {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Producer:</h3>
+
+    <form class="form new-project-form">
+      <div class="form-group">
+        <label for="project-name">producer name:</label>
+        <input class="form-input" type="text" id="project-name" name="producer_name" />
+      </div>
+      <div class="form-group">
+        <label for="project-funding">producer goods:</label>
+        <input class="form-input" type="text" id="project-funding" name="producer_goods" />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <h3>Consumer:</h3>
+
+      <form class="form new-project-form">
+        <div class="form-group">
+          <label for="project-name">consumer name:</label>
+          <input class="form-input" type="text" id="project-name" name="consumer_name" />
+        </div>
+        <div class="form-group">
+          <label for="project-funding">consumer goods:</label>
+          <input class="form-input" type="text" id="project-funding" name="consumer_goods" />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+      </form>
+    </div>
+
+
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h3>Items:</h3>
+
+        <form class="form new-project-form">
+          <div class="form-group">
+            <label for="project-name">Item name:</label>
+            <input class="form-input" type="text" id="project-name" name="items_name" />
+          </div>
+          <div class="form-group">
+            <label for="project-funding">Item price ($):</label>
+            <input class="form-input" type="number" id="project-funding" name="item_price" />
+          </div>
+          <div class="form-group">
+            <label for="project-desc">description:</label>
+            <textarea class="form-input" id="project-desc" name="item_description"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Create</button>
+          </div>
+        </form>
+      </div>
+
+
+      {{#if producers.length}}
+      <div class="col-md-6 project-list">
+        <h3>Current Producers:</h3>
+
+        {{#each producers as |producer|}}
+        <div class="row mb-2">
+          <div class="col-md-8">
+            <h4><a href="/producer/{{producer.id}}">{{producer.producer_name}}</a></h4>
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-sm btn-danger" data-id="{{producer.id}}">DELETE</button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+    </div>
+
+
+    <script src="./js/profile.js"></script>

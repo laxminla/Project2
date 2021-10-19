@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { Consumer, Producer, Items } = require('../../../../groupproject-2/Project2Final/Project2/models');
-
+const { Consumer, Producer, Items, User } = require('../../models');
 
 // Get all consumer
 router.get('/', async (req, res) => {

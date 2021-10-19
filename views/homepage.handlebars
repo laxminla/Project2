@@ -1,22 +1,20 @@
-<ul>
-    {{#each producers as |producer|}}
-    <li>{{producer.producer_name}}</li>
-    {{/each}}
-</ul>
+<!-- Loop over each object in the projects array -->
+{{#each producers as |producer| }}
+<div class="row mb-4 project">
+    <div class="col-md-5">
+        <h2>
+            <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+            {{{get_emoji}}}
+            <a href="/producer/{{producer.id}}">{{producer.producer_name}}</a>
+        </h2>
+        <p>
+            <span for="img" aria-label="money">💲</span>
+            <!-- Pass needed_funding value to the helper function -->
+            <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
+            needed!
+        </p>
+        <p>Created by {{producer.producer_goods}} on {{format_date project.date_created}}</p>
+    </div>
 
-{{#each producers as |producer|}}
-{{> producer}}
+</div>
 {{/each}}
-
-
-<ul>
-    {{#each consumers as |consumer|}}
-    <li>{{consumer.consumer_name}}</li>
-    {{/each}}
-</ul>
-
-<ul>
-    {{#each items as |item|}}
-    <li>{{item.item_name}}</li>
-    {{/each}}
-</ul>
