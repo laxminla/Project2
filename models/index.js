@@ -21,4 +21,10 @@ Items.belongsTo(Consumer, {
     foreignKey: 'consumer_id',
 });
 
+Consumer.hasMany(User, {
+
+    foreignKey: 'consumer_id',
+    onDelete: 'CASCADE'
+});
+
 module.exports = { Consumer, Items, Producer, User };

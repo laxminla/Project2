@@ -1,12 +1,12 @@
 <section class="container">
   <h3 class="items-name">{{items.items_name}}</h3>
-  <h4>items_description</h4>
-   <h4>items_price</h4>
- 
+  <h4>item_description</h4>
+  <h4>item_price</h4>
 
-   {{#if loggedIn}}
+
+  {{#if loggedIn}}
   <section class="flex-row justify-center">
-    {{!-- {{#each item.item_name.items as |item|}} --}}
+    {{#each item.items_name as |item|}}
     {{> items-details}}
     {{/each}}
   </section>

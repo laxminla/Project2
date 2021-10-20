@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Consumer, Producer, Items, User } = require('../../models');
+const { Consumer } = require('../../models');
+
 
 // Get all consumer
 router.get('/', async (req, res) => {
@@ -32,7 +33,7 @@ router.get('/:id', async (req, res) => {
 
 
 // create a new consumer
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   Consumer.create(req.body)
     .then(dbConsumerData => res.json(dbConsumerData))
     .catch(err => {

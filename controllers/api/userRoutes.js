@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
-const { Consumer, Producer, Items, User } = require('../../models');
+const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
   console.log(req.body);

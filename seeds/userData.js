@@ -14,7 +14,7 @@ const userData = [
 
 ];
 
-const seedUser = () => User.Create(userData);
+const seedUser = () => User.bulkCreate(userData);
 
 module.exports = seedUser;
 
