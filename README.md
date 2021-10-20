@@ -1,30 +1,39 @@
 
+# Title of your project
+Project 2 - Supply Chain App
+
+## Description
+Supply Chain app displays different producers, consumers and items what you are trying to look for and stores different datas in a database. You can get access to create different producers, consumers, and items data at the front end.  At the server side you can make update on different models by using GET, POST, PUT and DELETE routes.
+
+## User story:
+As a user, I want to create producers, consumers, and items when I login to supply chain app.
+As a user, I can use different routes to update and retrive datas in a database. 
+
+## Installation
+- clone the repo from github
+- download Node
+- create server.js file.
+- install inquirer package using npm init.
+- setup gitignore file.
+- create schema table
+- sequalize different models
+- create heroku login
+
+## Contribution
+pull requests are welcome. For any changes, please open an issue first and mention what you would like to talk.
 
 
-Project Title: Project 2 - Supply Chain Tracking App
+## Tests
+- run node server
+- run npm run seed
+- open insomnia to retrive datas
+
+## Git/Links
+https://github.com/laxminla/Project2.git
 
 
-Project Description: Our application will take in product data from producers and store information about the products across multiple databases.
+## Linkedin
+laxminla@linkedin.com
 
-
-
-User Story: 
-As a Producer: I enter information about goods I have produced into a form, and the information is stored in a productsAvailable database to be queried. 
-
-As a Producer: I can set a price when I enter a good into the application.
-
-As a Producer: When a product is sold I want the productsSold database to be updated. I enter information about goods I have sold in a day/ I want to update.
-
-As a Producer: The application tracks the amount of revenue I generate.
-
-As a Consumer: I can access data about what products are available, by querying our restful API.
-
-As a Consumer: When I choose to purchase a good, the good is deleted from the productsAvailable database, and added to the productsSold database.
-
-As a Consumer: I can log in, and once I’ve purchased an item it is stored in a ownedByConsumer database.
-
-As a Consumer: The application tracks the amount of money I have left, and doesn’t let me purchase items I cannot afford. 
-
-
-
-Team Members: James, Laxmi, Rudy
+## E-mail
+laxminla@yahoo.com
