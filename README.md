@@ -3,7 +3,7 @@
 Project 2 - Supply Chain App
 
 ## Description
-Supply Chain app displays different producers, consumers and items what you are trying to look for and stores different datas in a database. You can get access to create different producers, consumers, and items data at the front end.  At the server side you can make update on different models by using GET, POST, PUT and DELETE routes.
+The Supply Chain app displays different producers, consumers, and items that you are trying to look for and stores different data in a database. You can get access to create different producers, consumers, and items data at the front end. At the server-side, you can make updates on different models by using GET, POST, PUT and DELETE routes.
 
 ## User story:
 As a user, I want to create producers, consumers, and items when I login to supply chain app.
@@ -28,8 +28,9 @@ pull requests are welcome. For any changes, please open an issue first and menti
 - run npm run seed
 - open insomnia to retrive datas
 
-## Git/Links
+## Git and Heroku Links
 https://github.com/laxminla/Project2.git
+https://radiant-peak-58027.herokuapp.com/
 
 
 ## Linkedin
